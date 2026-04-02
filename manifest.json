@@ -1,0 +1,21 @@
+{
+  "name": "Daniel Kincaid",
+  "short_name": "Daniel Kincaid",
+  "description": "Singer \u00b7 Songwriter",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0d0c0b",
+  "theme_color": "#C4973A",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/SteveP999/Hello-Texas-Records/main/daniel-kincaid-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/SteveP999/Hello-Texas-Records/main/daniel-kincaid-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
