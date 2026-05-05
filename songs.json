@@ -1,0 +1,57 @@
+[
+  {
+    "id": "just_this_once",
+    "num": "01",
+    "title": "Just This Once",
+    "artist": "Daniel Kincaid",
+    "album": "Running Out of Reasons",
+    "type": "Latest Single",
+    "isLatest": true,
+    "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-just-this-once-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/xfwjj7nwovh6s7gf5oy50/Just-This-Once-Mastered-MP3.mp3?rlkey=1phk6fx0ulbdwr0qpa7zdzjd6&raw=1"
+  },
+  {
+    "id": "running_out_of_reasons",
+    "num": "02",
+    "title": "Running Out of Reasons",
+    "artist": "Daniel Kincaid",
+    "album": "Running Out of Reasons",
+    "type": "Single",
+    "isLatest": false,
+    "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-running-out-of-reasons-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/jozx0hhyrkk4e4w3qohqq/Daniel-Kincaid-Running-Out-Of-Reasons-Studio-Mastered-MP3.mp3?rlkey=3sig8j1al2ttgrj36q94m762i&raw=1"
+  },
+  {
+    "id": "every_little_maybe",
+    "num": "03",
+    "title": "Every Little Maybe",
+    "artist": "Daniel Kincaid",
+    "album": "Running Out of Reasons",
+    "type": "Single",
+    "isLatest": false,
+    "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-every-little-maybe-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/yqazu7n0kmft3lwjbl7u9/Daniel-Kincaid-Every-Little-Maybe-Album-Cut-Mastered-MP3.mp3?rlkey=d5wm2e19jp90fvh8jb3x1idv0&raw=1"
+  },
+  {
+    "id": "i_was_a_song",
+    "num": "04",
+    "title": "I Was a Song",
+    "artist": "Daniel Kincaid",
+    "album": "Running Out of Reasons",
+    "type": "Single",
+    "isLatest": false,
+    "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-i-was-a-song-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/54a5viw47taqgo0gbchvk/I-was-a-Song-v2-Mastered-MP3.mp3?rlkey=wm3wwzbidtrose7m93046jd03&raw=1"
+  },
+  {
+    "id": "already_gone",
+    "num": "05",
+    "title": "Already Gone",
+    "artist": "Daniel Kincaid",
+    "album": "Running Out of Reasons",
+    "type": "Single",
+    "isLatest": false,
+    "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-already-gone-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/gymx4asac3silj4s26bl5/Already-Gone-Mastered-MP3.mp3?rlkey=26ppdzh2o2my4ul41w6dmn9on&raw=1"
+  }
+]
