@@ -9,7 +9,8 @@
     "type": "Latest Single",
     "isLatest": true,
     "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-just-this-once-cover.png",
-    "audio": "https://www.dropbox.com/scl/fi/xfwjj7nwovh6s7gf5oy50/Just-This-Once-Mastered-MP3.mp3?rlkey=1phk6fx0ulbdwr0qpa7zdzjd6&raw=1"
+    "audio": "https://www.dropbox.com/scl/fi/xfwjj7nwovh6s7gf5oy50/Just-This-Once-Mastered-MP3.mp3?rlkey=1phk6fx0ulbdwr0qpa7zdzjd6&raw=1",
+    "videos": []
   },
   {
     "id": "running_out_of_reasons",
@@ -21,7 +22,8 @@
     "type": "Single",
     "isLatest": false,
     "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-running-out-of-reasons-cover.png",
-    "audio": "https://www.dropbox.com/scl/fi/jozx0hhyrkk4e4w3qohqq/Daniel-Kincaid-Running-Out-Of-Reasons-Studio-Mastered-MP3.mp3?rlkey=3sig8j1al2ttgrj36q94m762i&raw=1"
+    "audio": "https://www.dropbox.com/scl/fi/jozx0hhyrkk4e4w3qohqq/Daniel-Kincaid-Running-Out-Of-Reasons-Studio-Mastered-MP3.mp3?rlkey=3sig8j1al2ttgrj36q94m762i&raw=1",
+    "videos": []
   },
   {
     "id": "every_little_maybe",
@@ -33,7 +35,8 @@
     "type": "Single",
     "isLatest": false,
     "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-every-little-maybe-cover.png",
-    "audio": "https://www.dropbox.com/scl/fi/yqazu7n0kmft3lwjbl7u9/Daniel-Kincaid-Every-Little-Maybe-Album-Cut-Mastered-MP3.mp3?rlkey=d5wm2e19jp90fvh8jb3x1idv0&raw=1"
+    "audio": "https://www.dropbox.com/scl/fi/yqazu7n0kmft3lwjbl7u9/Daniel-Kincaid-Every-Little-Maybe-Album-Cut-Mastered-MP3.mp3?rlkey=d5wm2e19jp90fvh8jb3x1idv0&raw=1",
+    "videos": []
   },
   {
     "id": "i_was_a_song",
@@ -45,7 +48,13 @@
     "type": "Single",
     "isLatest": false,
     "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-i-was-a-song-cover.png",
-    "audio": "https://www.dropbox.com/scl/fi/54a5viw47taqgo0gbchvk/I-was-a-Song-v2-Mastered-MP3.mp3?rlkey=wm3wwzbidtrose7m93046jd03&raw=1"
+    "audio": "https://www.dropbox.com/scl/fi/54a5viw47taqgo0gbchvk/I-was-a-Song-v2-Mastered-MP3.mp3?rlkey=wm3wwzbidtrose7m93046jd03&raw=1",
+    "videos": [
+      {
+        "title": "Official Video",
+        "youtube": "https://youtu.be/PurOtrSGZBA"
+      }
+    ]
   },
   {
     "id": "already_gone",
@@ -57,7 +66,8 @@
     "type": "Single",
     "isLatest": false,
     "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-already-gone-cover.png",
-    "audio": "https://www.dropbox.com/scl/fi/gymx4asac3silj4s26bl5/Already-Gone-Mastered-MP3.mp3?rlkey=26ppdzh2o2my4ul41w6dmn9on&raw=1"
+    "audio": "https://www.dropbox.com/scl/fi/gymx4asac3silj4s26bl5/Already-Gone-Mastered-MP3.mp3?rlkey=26ppdzh2o2my4ul41w6dmn9on&raw=1",
+    "videos": []
   },
   {
     "id": "running_out_of_reasons_acoustic",
@@ -69,7 +79,8 @@
     "type": "Single",
     "isLatest": false,
     "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-running-out-of-reasons-acoustic-cover.png",
-    "audio": "https://www.dropbox.com/scl/fi/wxb9d60j46233617z9np0/Running-Out-of-Reasons-STRIPPED-Mastered-MP3-v02.mp3?rlkey=4rfrumm5rsnfncbe7ft9p6j8k&raw=1"
+    "audio": "https://www.dropbox.com/scl/fi/wxb9d60j46233617z9np0/Running-Out-of-Reasons-STRIPPED-Mastered-MP3-v02.mp3?rlkey=4rfrumm5rsnfncbe7ft9p6j8k&raw=1",
+    "videos": []
   },
   {
     "id": "every_little_maybe_acoustic",
@@ -81,7 +92,8 @@
     "type": "Single",
     "isLatest": false,
     "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-every-little-maybe-acoustic-cover.png",
-    "audio": "https://www.dropbox.com/scl/fi/nd9rduu6whs4e1ux405xe/Every-Little-Maybe-Guitar-and-Vocals-Mastered-MP3.mp3?rlkey=0gjwex7bq2s3ueej92z54efq4&raw=1"
+    "audio": "https://www.dropbox.com/scl/fi/nd9rduu6whs4e1ux405xe/Every-Little-Maybe-Guitar-and-Vocals-Mastered-MP3.mp3?rlkey=0gjwex7bq2s3ueej92z54efq4&raw=1",
+    "videos": []
   },
   {
     "id": "i_was_a_song_acoustic",
@@ -93,7 +105,8 @@
     "type": "Single",
     "isLatest": false,
     "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-i-was-a-song-acoustic-cover.png",
-    "audio": "https://www.dropbox.com/scl/fi/47xqfer16wlb1bnq2f9b7/I-Was-a-Song-Stripped-Mastered-MP3.mp3?rlkey=5q9sab7d3g63ey5f9yaupm3n5&raw=1"
+    "audio": "https://www.dropbox.com/scl/fi/47xqfer16wlb1bnq2f9b7/I-Was-a-Song-Stripped-Mastered-MP3.mp3?rlkey=5q9sab7d3g63ey5f9yaupm3n5&raw=1",
+    "videos": []
   },
   {
     "id": "already_gone_acoustic",
@@ -105,7 +118,8 @@
     "type": "Single",
     "isLatest": false,
     "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-already-gone-acoustic-cover.png",
-    "audio": "https://www.dropbox.com/scl/fi/dmqu2pxxj7obdyeeporp5/Already-Gone-Acoustic-Mastered-MP3.mp3?rlkey=cnrkn2gcbn6j37adjx50hd6zy&raw=1"
+    "audio": "https://www.dropbox.com/scl/fi/dmqu2pxxj7obdyeeporp5/Already-Gone-Acoustic-Mastered-MP3.mp3?rlkey=cnrkn2gcbn6j37adjx50hd6zy&raw=1",
+    "videos": []
   },
   {
     "id": "just_this_once_acoustic",
@@ -117,6 +131,7 @@
     "type": "Single",
     "isLatest": false,
     "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-just-this-once-acoustic-cover.png",
-    "audio": "https://www.dropbox.com/scl/fi/dmp9xepktkg5lcozhipnl/Just-This-Once-Acoustic-Mastered-MP3.wav?rlkey=i188wzibt9uyzvjfuwa4bh4cp&raw=1"
+    "audio": "https://www.dropbox.com/scl/fi/dmp9xepktkg5lcozhipnl/Just-This-Once-Acoustic-Mastered-MP3.wav?rlkey=i188wzibt9uyzvjfuwa4bh4cp&raw=1",
+    "videos": []
   }
 ]
