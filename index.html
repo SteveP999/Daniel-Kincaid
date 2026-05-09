@@ -152,7 +152,7 @@ footer{background:var(--black);border-top:1px solid var(--amber-glow);padding:4r
 </head>
 <body>
 <nav id="topnav">
-  <img class="nav-logo" src="https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png" alt="Daniel Kincaid" style="border-radius:2px;">
+  <img class="nav-logo" src="covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png" alt="Daniel Kincaid" style="border-radius:2px;">
   <ul class="nav-links">
     <li><a href="#bio">About</a></li>
     <li><a href="#albums">Music</a></li>
@@ -161,12 +161,12 @@ footer{background:var(--black);border-top:1px solid var(--amber-glow);padding:4r
   </ul>
 </nav>
 <section class="hero">
-  <div class="hero-bg" style="background-image:url('https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/daniel-kincaid-hero-background.png');"></div>
+  <div class="hero-bg" style="background-image:url('daniel-kincaid-hero-background.png');"></div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
     <div class="hero-label">Hello Texas Records</div>
     <div class="hero-logo-wrap">
-      <img src="https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png" alt="Daniel Kincaid" style="border-radius:3px;">
+      <img src="covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png" alt="Daniel Kincaid" style="border-radius:3px;">
     </div>
     <p class="hero-tagline">Where every song<br>still means something.</p>
     <div class="hero-ctas">
@@ -220,9 +220,9 @@ footer{background:var(--black);border-top:1px solid var(--amber-glow);padding:4r
 <div id="albums"><div class="loading-ph" id="albums-loading">Loading music…</div></div>
 
 <div class="photo-strip">
-  <img src="https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/daniel-kincaid-photo-1.png" alt="Daniel Kincaid">
-  <img src="https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/daniel-kincaid-photo-2.png" alt="Daniel Kincaid">
-  <img src="https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/daniel-kincaid-photo-3.png" alt="Daniel Kincaid">
+  <img src="daniel-kincaid-photo-1.png" alt="Daniel Kincaid">
+  <img src="daniel-kincaid-photo-2.png" alt="Daniel Kincaid">
+  <img src="daniel-kincaid-photo-3.png" alt="Daniel Kincaid">
 </div>
 <footer>
   <div class="foot-label">Daniel Kincaid &nbsp;·&nbsp; Hello Texas Records</div>
@@ -258,9 +258,8 @@ footer{background:var(--black);border-top:1px solid var(--amber-glow);padding:4r
   </div>
 </div>
 <script>
-const ARTIST='Daniel Kincaid',REPO='Daniel-Kincaid';
-const BASE=`https://raw.githubusercontent.com/SteveP999/${REPO}/main`;
-const SONGS_URL=`${BASE}/songs.json`,LATEST_URL=`${BASE}/latest.json`;
+const ARTIST='Daniel Kincaid';
+const SONGS_URL='songs.json',LATEST_URL='latest.json';
 let SONGS=[],ORDER=[],cur=null;
 const audio=document.getElementById('audio'),player=document.getElementById('player'),pThumb=document.getElementById('p-thumb');
 function fmt(s){if(!isFinite(s)||isNaN(s))return'0:00';const m=Math.floor(s/60),sec=Math.floor(s%60);return m+':'+(sec<10?'0':'')+sec;}
