@@ -40,7 +40,13 @@
       "album": "Running Out of Reasons",
       "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/images/covers/daniel-kincaid-i-was-a-song-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/54a5viw47taqgo0gbchvk/I-was-a-Song-v2-Mastered-MP3.mp3?rlkey=wm3wwzbidtrose7m93046jd03&raw=1",
-      "videos": []
+      "videos": [
+        {
+          "title": "I Was a Song",
+          "youtube": "https://youtu.be/PurOtrSGZBA",
+          "order": 1
+        }
+      ]
     },
     {
       "title": "Already Gone",
