@@ -1,21 +1,10 @@
 {
   "name": "Daniel Kincaid",
-  "short_name": "Daniel Kincaid",
-  "description": "Singer \u00b7 Songwriter",
+  "short_name": "Daniel Kinca",
+  "description": "Daniel Kincaid on Hello Texas Records",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#0d0c0b",
-  "theme_color": "#C4973A",
-  "icons": [
-    {
-      "src": "https://raw.githubusercontent.com/SteveP999/Hello-Texas-Records/main/daniel-kincaid-logo.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "https://raw.githubusercontent.com/SteveP999/Hello-Texas-Records/main/daniel-kincaid-logo.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  "background_color": "#090806",
+  "theme_color": "#d49a25",
+  "icons": []
 }
