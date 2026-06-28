@@ -224,5 +224,25 @@
     "includeOnHomepage": false,
     "explicit": false,
     "tags": []
+  },
+  {
+    "id": "daniel-kincaid-two-tickets-to-anywhere-acoustic",
+    "num": "12",
+    "title": "Two Tickets to Anywhere (Acoustic)",
+    "artist": "Daniel Kincaid",
+    "album": "Running Out of Reasons Acoustic",
+    "trackNumber": 12,
+    "albumOrder": 12,
+    "albumCover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png",
+    "type": "single",
+    "isLatest": false,
+    "cover": "https://raw.githubusercontent.com/SteveP999/Daniel-Kincaid/main/images/covers/daniel-kincaid-two-tickets-to-anywhere-acoustic-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/fs9jhg71t4cares7cinfa/daniel-kincaid-two-tickets-to-anywhere-acoustic-mp3.mp3?rlkey=3opi1aeo4sclkts0n9xskw9w5&raw=1",
+    "audioSrc": "https://www.dropbox.com/scl/fi/fs9jhg71t4cares7cinfa/daniel-kincaid-two-tickets-to-anywhere-acoustic-mp3.mp3?rlkey=3opi1aeo4sclkts0n9xskw9w5&raw=1",
+    "videos": [],
+    "includeOnRadio": true,
+    "includeOnHomepage": false,
+    "explicit": false,
+    "tags": []
   }
 ]
