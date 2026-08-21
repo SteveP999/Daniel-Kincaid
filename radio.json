@@ -2,11 +2,11 @@
   "artist": "Daniel Kincaid",
   "latestUrl": "latest.json",
   "featuredTrack": {
-    "title": "Still Falling For You (Acoustic)",
+    "title": "Good Night, Good Luck, Goodbye",
     "artist": "Daniel Kincaid",
-    "album": "Running Out of Reasons Acoustic",
-    "cover": "images/covers/daniel-kincaid-still-falling-for-you-acoustic-cover.png",
-    "audioSrc": "https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1",
+    "album": "Running Out of Reasons",
+    "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png",
+    "audioSrc": "https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1",
     "videos": []
   },
   "tracks": [
@@ -24,6 +24,14 @@
       "album": "Running Out of Reasons",
       "cover": "images/covers/daniel-kincaid-every-little-maybe-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/yqazu7n0kmft3lwjbl7u9/Daniel-Kincaid-Every-Little-Maybe-Album-Cut-Mastered-MP3.mp3?rlkey=d5wm2e19jp90fvh8jb3x1idv0&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Good Night, Good Luck, Goodbye",
+      "artist": "Daniel Kincaid",
+      "album": "Running Out of Reasons",
+      "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1",
       "videos": []
     },
     {
