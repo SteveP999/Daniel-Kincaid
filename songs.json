@@ -333,7 +333,7 @@
     "num": "16",
     "title": "Still Falling For You",
     "artist": "Daniel Kincaid",
-    "album": "Running Out of Reasons",
+    "album": "Running out of Reasons",
     "trackNumber": 7,
     "albumOrder": 7,
     "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png",
@@ -347,7 +347,11 @@
     "includeOnHomepage": true,
     "explicit": false,
     "tags": [],
-    "streaming": {}
+    "streaming": {
+      "spotify": "",
+      "apple": "",
+      "youtubeMusic": ""
+    }
   },
   {
     "id": "daniel-kincaid-good-night-good-luck-goodbye",
