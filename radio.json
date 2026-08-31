@@ -11,65 +11,11 @@
   },
   "tracks": [
     {
-      "title": "Already Gone",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "images/covers/daniel-kincaid-already-gone-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/gymx4asac3silj4s26bl5/Already-Gone-Mastered-MP3.mp3?rlkey=26ppdzh2o2my4ul41w6dmn9on&raw=1",
-      "videos": []
-    },
-    {
-      "title": "Every Little Maybe",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "images/covers/daniel-kincaid-every-little-maybe-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/yqazu7n0kmft3lwjbl7u9/Daniel-Kincaid-Every-Little-Maybe-Album-Cut-Mastered-MP3.mp3?rlkey=d5wm2e19jp90fvh8jb3x1idv0&raw=1",
-      "videos": []
-    },
-    {
       "title": "Good Night, Good Luck, Goodbye",
       "artist": "Daniel Kincaid",
       "album": "Running Out of Reasons",
       "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1",
-      "videos": []
-    },
-    {
-      "title": "I Was a Song",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "images/covers/daniel-kincaid-i-was-a-song-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/zyxxfrhmo1x0gjkyinlit/daniel-kikcaid-i-was-a-song-redone-MP3.mp3?rlkey=xgaxjzsv42tms1qut458aw3eo&raw=1",
-      "videos": [
-        {
-          "title": "I Was a Song",
-          "youtube": "https://youtu.be/PurOtrSGZBA",
-          "order": 1
-        }
-      ]
-    },
-    {
-      "title": "If I Could Love You Again",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "images/covers/daniel-kincaid-if-i-could-love-you-again-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/2ql4qup86bgc4u6eklmuu/daniel-kincaid-if-i-could-love-you-again-mp3.mp3?rlkey=p2fm0owphs9d677pdrsb5u5ba&raw=1",
-      "videos": []
-    },
-    {
-      "title": "Just This Once",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "images/covers/daniel-kincaid-just-this-once-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/xfwjj7nwovh6s7gf5oy50/Just-This-Once-Mastered-MP3.mp3?rlkey=1phk6fx0ulbdwr0qpa7zdzjd6&raw=1",
-      "videos": []
-    },
-    {
-      "title": "Running Out of Reasons",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "images/covers/daniel-kincaid-running-out-of-reasons-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/jozx0hhyrkk4e4w3qohqq/Daniel-Kincaid-Running-Out-Of-Reasons-Studio-Mastered-MP3.mp3?rlkey=3sig8j1al2ttgrj36q94m762i&raw=1",
       "videos": []
     },
     {
@@ -109,14 +55,14 @@
       "artist": "Daniel Kincaid",
       "album": "Running Out of Reasons Acoustic",
       "cover": "images/covers/daniel-kincaid-i-was-a-song-acoustic-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/l16w4fgdxjj8bte180num/daniel-kincaid-i-was-a-song-acoustic-MP3-updated-mastered.mp3?rlkey=0h1x78e6nm2inkkoe2bj25ucq&dl=0",
+      "audioSrc": "https://www.dropbox.com/scl/fi/l16w4fgdxjj8bte180num/daniel-kincaid-i-was-a-song-acoustic-MP3-updated-mastered.mp3?rlkey=0h1x78e6nm2inkkoe2bj25ucq&raw=1",
       "videos": []
     },
     {
       "title": "If I Could Love You Again (Acoustic)",
       "artist": "Daniel Kincaid",
       "album": "Running Out of Reasons Acoustic",
-      "cover": "images/covers/daniel-kincaid-if-i-could-love-you-again-acoustic-cover-updated.png",
+      "cover": "images/covers/daniel-kincaid-if-i-could-love-you-again-acoustic-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/jmo6l2jfrqolpnl8gth2r/daniel-kincaid-if-i-could-love-you-again-acoustic-mp3.mp3?rlkey=bvidcpl1ng08kobp64r5fqqxg&raw=1",
       "videos": []
     },
@@ -158,6 +104,60 @@
       "album": "Running Out of Reasons Acoustic",
       "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/qhzbpxztcd9dbrauk2yc6/daniel-kincaid-good-luck-goodbye-acoustic-MP3.mp3?rlkey=0gp19ccrds2ng26pwdj9t1cc9&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Already Gone",
+      "artist": "Daniel Kincaid",
+      "album": "Running out of Reasons",
+      "cover": "images/covers/daniel-kincaid-already-gone-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/gymx4asac3silj4s26bl5/Already-Gone-Mastered-MP3.mp3?rlkey=26ppdzh2o2my4ul41w6dmn9on&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Every Little Maybe",
+      "artist": "Daniel Kincaid",
+      "album": "Running out of Reasons",
+      "cover": "images/covers/daniel-kincaid-every-little-maybe-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/yqazu7n0kmft3lwjbl7u9/Daniel-Kincaid-Every-Little-Maybe-Album-Cut-Mastered-MP3.mp3?rlkey=d5wm2e19jp90fvh8jb3x1idv0&raw=1",
+      "videos": []
+    },
+    {
+      "title": "I Was a Song",
+      "artist": "Daniel Kincaid",
+      "album": "Running out of Reasons",
+      "cover": "images/covers/daniel-kincaid-i-was-a-song-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/zyxxfrhmo1x0gjkyinlit/daniel-kikcaid-i-was-a-song-redone-MP3.mp3?rlkey=xgaxjzsv42tms1qut458aw3eo&raw=1",
+      "videos": [
+        {
+          "title": "I Was a Song",
+          "youtube": "https://youtu.be/PurOtrSGZBA",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "title": "If I Could Love You Again",
+      "artist": "Daniel Kincaid",
+      "album": "Running out of Reasons",
+      "cover": "images/covers/daniel-kincaid-if-i-could-love-you-again-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/2ql4qup86bgc4u6eklmuu/daniel-kincaid-if-i-could-love-you-again-mp3.mp3?rlkey=p2fm0owphs9d677pdrsb5u5ba&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Just This Once",
+      "artist": "Daniel Kincaid",
+      "album": "Running out of Reasons",
+      "cover": "images/covers/daniel-kincaid-just-this-once-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/xfwjj7nwovh6s7gf5oy50/Just-This-Once-Mastered-MP3.mp3?rlkey=1phk6fx0ulbdwr0qpa7zdzjd6&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Running Out of Reasons",
+      "artist": "Daniel Kincaid",
+      "album": "Running out of Reasons",
+      "cover": "images/covers/daniel-kincaid-running-out-of-reasons-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/jozx0hhyrkk4e4w3qohqq/Daniel-Kincaid-Running-Out-Of-Reasons-Studio-Mastered-MP3.mp3?rlkey=3sig8j1al2ttgrj36q94m762i&raw=1",
       "videos": []
     }
   ]
