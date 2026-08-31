@@ -11,30 +11,6 @@
   },
   "tracks": [
     {
-      "title": "Good Night, Good Luck, Goodbye",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1",
-      "videos": []
-    },
-    {
-      "title": "Still Falling For You",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "images/covers/daniel-kincaid-still-falling-for-you-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1",
-      "videos": []
-    },
-    {
-      "title": "Two Tickets To Anywhere",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "images/covers/daniel-kincaid-two-tickets-to-anywhere-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/q9psdn077iar1wqr9c7vh/daniel-kincaid-two-tickets-to-anywere-studio-mp3.mp3?rlkey=roqzl8qzizmvoypnb9pna9uu8&raw=1",
-      "videos": []
-    },
-    {
       "title": "Already Gone (Acoustic)",
       "artist": "Daniel Kincaid",
       "album": "Running Out of Reasons Acoustic",
@@ -130,8 +106,8 @@
       "audioSrc": "https://www.dropbox.com/scl/fi/zyxxfrhmo1x0gjkyinlit/daniel-kikcaid-i-was-a-song-redone-MP3.mp3?rlkey=xgaxjzsv42tms1qut458aw3eo&raw=1",
       "videos": [
         {
-          "title": "I Was a Song",
           "youtube": "https://youtu.be/PurOtrSGZBA",
+          "title": "Official Video",
           "order": 1
         }
       ]
@@ -158,6 +134,30 @@
       "album": "Running out of Reasons",
       "cover": "images/covers/daniel-kincaid-running-out-of-reasons-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/jozx0hhyrkk4e4w3qohqq/Daniel-Kincaid-Running-Out-Of-Reasons-Studio-Mastered-MP3.mp3?rlkey=3sig8j1al2ttgrj36q94m762i&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Still Falling For You",
+      "artist": "Daniel Kincaid",
+      "album": "Running out of Reasons",
+      "cover": "images/covers/daniel-kincaid-still-falling-for-you-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Good Night, Good Luck, Goodbye",
+      "artist": "Daniel Kincaid",
+      "album": "Running out of Reasons",
+      "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Two Tickets To Anywhere",
+      "artist": "Daniel Kincaid",
+      "album": "Running out of Reasons",
+      "cover": "images/covers/daniel-kincaid-two-tickets-to-anywhere-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/q9psdn077iar1wqr9c7vh/daniel-kincaid-two-tickets-to-anywere-studio-mp3.mp3?rlkey=roqzl8qzizmvoypnb9pna9uu8&raw=1",
       "videos": []
     }
   ]
