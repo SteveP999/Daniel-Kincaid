@@ -243,7 +243,7 @@
     "num": "12",
     "title": "I Was a Song",
     "artist": "Daniel Kincaid",
-    "album": "Running Out of Reasons",
+    "album": "Running out of Reasons",
     "trackNumber": 3,
     "albumOrder": 3,
     "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png",
@@ -263,7 +263,11 @@
     "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
-    "streaming": {}
+    "streaming": {
+      "spotify": "",
+      "apple": "",
+      "youtubeMusic": ""
+    }
   },
   {
     "id": "daniel-kincaid-if-i-could-love-you-again",
