@@ -169,11 +169,11 @@
       "videos": []
     },
     {
-      "title": "Never Say Forever",
+      "title": "Never Say Forever (Acoustic)",
       "artist": "Daniel Kincaid",
       "album": "Running Out of Reasons Acoustic",
-      "cover": "",
-      "audioSrc": "https://www.dropbox.com/scl/fi/61ul2037yh3mjtpoade8a/daniel-kincaid-never-say-forever-studio-MP3-mastered.mp3?rlkey=hckr2unar12fyu9yhh7jgplxm&raw=1",
+      "cover": "images/covers/daniel-kincaid-never-say-forever-acoustic-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/1liztvoz3afta1e2hyv39/daniel-kincaid-never-say-forever-acoustic-MP3-mastered.mp3?rlkey=z3fb98az2rwlu03kn8ajojmfa&raw=1",
       "videos": []
     }
   ]
