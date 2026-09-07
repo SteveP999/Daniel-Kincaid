@@ -89,22 +89,6 @@
       "videos": []
     },
     {
-      "title": "Never Say Forever",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "images/covers/daniel-kincaid-never-say-forever-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/61ul2037yh3mjtpoade8a/daniel-kincaid-never-say-forever-studio-MP3-mastered.mp3?rlkey=hckr2unar12fyu9yhh7jgplxm&raw=1",
-      "videos": []
-    },
-    {
-      "title": "Never Say Forever",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "",
-      "audioSrc": "https://www.dropbox.com/scl/fi/61ul2037yh3mjtpoade8a/daniel-kincaid-never-say-forever-studio-MP3-mastered.mp3?rlkey=hckr2unar12fyu9yhh7jgplxm&raw=1",
-      "videos": []
-    },
-    {
       "title": "Already Gone (Acoustic)",
       "artist": "Daniel Kincaid",
       "album": "Running Out of Reasons Acoustic",
@@ -174,6 +158,22 @@
       "album": "Running Out of Reasons Acoustic",
       "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/qhzbpxztcd9dbrauk2yc6/daniel-kincaid-good-luck-goodbye-acoustic-MP3.mp3?rlkey=0gp19ccrds2ng26pwdj9t1cc9&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Never Say Forever",
+      "artist": "Daniel Kincaid",
+      "album": "Running Out of Reasons Acoustic",
+      "cover": "images/covers/daniel-kincaid-never-say-forever-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/61ul2037yh3mjtpoade8a/daniel-kincaid-never-say-forever-studio-MP3-mastered.mp3?rlkey=hckr2unar12fyu9yhh7jgplxm&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Never Say Forever",
+      "artist": "Daniel Kincaid",
+      "album": "Running Out of Reasons Acoustic",
+      "cover": "",
+      "audioSrc": "https://www.dropbox.com/scl/fi/61ul2037yh3mjtpoade8a/daniel-kincaid-never-say-forever-studio-MP3-mastered.mp3?rlkey=hckr2unar12fyu9yhh7jgplxm&raw=1",
       "videos": []
     }
   ]
