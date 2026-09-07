@@ -406,7 +406,7 @@
   {
     "id": "daniel-kincaid-never-say-forever",
     "num": "01",
-    "title": "Never Say Forever",
+    "title": "Never Say Forever (Acoustic)",
     "artist": "Daniel Kincaid",
     "album": "Running Out of Reasons Acoustic",
     "trackNumber": 99,
@@ -422,6 +422,10 @@
     "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
-    "streaming": {}
+    "streaming": {
+      "spotify": "",
+      "apple": "",
+      "youtubeMusic": ""
+    }
   }
 ]
