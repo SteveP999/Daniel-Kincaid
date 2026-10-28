@@ -36,7 +36,7 @@
     "audioSrc": "https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1",
     "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true,
+    "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
     "streaming": {}
@@ -105,7 +105,7 @@
     "audioSrc": "https://www.dropbox.com/scl/fi/2ql4qup86bgc4u6eklmuu/daniel-kincaid-if-i-could-love-you-again-mp3.mp3?rlkey=p2fm0owphs9d677pdrsb5u5ba&raw=1",
     "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true,
+    "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
     "streaming": {}
@@ -168,7 +168,7 @@
     "audioSrc": "https://www.dropbox.com/scl/fi/kkjsw6yz5pplf3tmx3yjk/daniel-kincaid-still-falling-for-you-studio-mp3.mp3?rlkey=k5ybq1kclxxv9kixabf96vmhy&raw=1",
     "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true,
+    "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
     "streaming": {}
@@ -189,7 +189,7 @@
     "audioSrc": "https://www.dropbox.com/scl/fi/q9psdn077iar1wqr9c7vh/daniel-kincaid-two-tickets-to-anywere-studio-mp3.mp3?rlkey=roqzl8qzizmvoypnb9pna9uu8&raw=1",
     "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true,
+    "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
     "streaming": {}
@@ -298,7 +298,7 @@
     "audioSrc": "https://www.dropbox.com/scl/fi/jmo6l2jfrqolpnl8gth2r/daniel-kincaid-if-i-could-love-you-again-acoustic-mp3.mp3?rlkey=bvidcpl1ng08kobp64r5fqqxg&raw=1",
     "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true,
+    "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
     "streaming": {}
@@ -355,13 +355,13 @@
     "albumOrder": 7,
     "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png",
     "type": "single",
-    "isLatest": true,
+    "isLatest": false,
     "cover": "images/covers/daniel-kincaid-still-falling-for-you-acoustic-cover.png",
     "audio": "https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1",
     "audioSrc": "https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1",
     "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true,
+    "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
     "streaming": {}
@@ -403,7 +403,7 @@
     "audioSrc": "https://www.dropbox.com/scl/fi/qhzbpxztcd9dbrauk2yc6/daniel-kincaid-good-luck-goodbye-acoustic-MP3.mp3?rlkey=0gp19ccrds2ng26pwdj9t1cc9&raw=1",
     "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true,
+    "includeOnHomepage": false,
     "explicit": false,
     "tags": [],
     "streaming": {}
@@ -432,5 +432,26 @@
       "apple": "",
       "youtubeMusic": ""
     }
+  },
+  {
+    "id": "daniel-kincaid-i-freeze",
+    "num": "12",
+    "title": "I Freeze",
+    "artist": "Daniel Kincaid",
+    "album": "Running Out of Reasons",
+    "trackNumber": 12,
+    "albumOrder": 12,
+    "albumCover": "",
+    "type": "single",
+    "isLatest": true,
+    "cover": "images/covers/daniel-kincaid-i-freeze-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/9yvwto17rwdgvk10owseh/daniel-kincaid-i-freeze-MP3-mastered.mp3?rlkey=n0w73rsvsqq2d0o6554353vd2&raw=1",
+    "audioSrc": "https://www.dropbox.com/scl/fi/9yvwto17rwdgvk10owseh/daniel-kincaid-i-freeze-MP3-mastered.mp3?rlkey=n0w73rsvsqq2d0o6554353vd2&raw=1",
+    "videos": [],
+    "includeOnRadio": false,
+    "includeOnHomepage": true,
+    "explicit": false,
+    "tags": [],
+    "streaming": {}
   }
 ]
