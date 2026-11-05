@@ -466,13 +466,17 @@
     "type": "single",
     "isLatest": true,
     "cover": "images/covers/daniel-kincaid-i-freeze-acoustic-cover.png",
-    "audio": "https://www.dropbox.com/scl/fo/f6y7kkyyce1q0hs2t4rju/ACgfSd8Q44JLOpeZHz-gtIg?rlkey=undsx1651nt71f2r8mslfmmkf&raw=1",
-    "audioSrc": "https://www.dropbox.com/scl/fo/f6y7kkyyce1q0hs2t4rju/ACgfSd8Q44JLOpeZHz-gtIg?rlkey=undsx1651nt71f2r8mslfmmkf&raw=1",
+    "audio": "https://www.dropbox.com/scl/fi/zpqgivgood1pc2mcxmqxk/daniel-kincaid-i-freeze-acoustic-MP3-mastered.mp3?rlkey=ytnhiju7kp26bvqwa6kr6tfw8&raw=1",
+    "audioSrc": "https://www.dropbox.com/scl/fi/zpqgivgood1pc2mcxmqxk/daniel-kincaid-i-freeze-acoustic-MP3-mastered.mp3?rlkey=ytnhiju7kp26bvqwa6kr6tfw8&raw=1",
     "videos": [],
     "includeOnRadio": false,
     "includeOnHomepage": true,
     "explicit": false,
     "tags": [],
-    "streaming": {}
+    "streaming": {
+      "spotify": "",
+      "apple": "",
+      "youtubeMusic": ""
+    }
   }
 ]
