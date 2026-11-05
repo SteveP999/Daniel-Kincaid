@@ -125,6 +125,7 @@ a{color:inherit}
 }
 .stage-logo img{
   width:min(1900px,99vw);
+  max-width:94vw !important;  /* size overrides set width:auto; this keeps the logo on screen */
   max-height:820px;
   object-fit:contain;
   mix-blend-mode:screen;
@@ -412,6 +413,13 @@ a{color:inherit}
   height:100%;
   display:block;
 }
+.video-embed-wrap.tall{aspect-ratio:9 / 16 !important;width:min(100%, calc(80vh * 9 / 16));margin:0 auto}
+.excl-wrap{position:relative;aspect-ratio:16 / 9;background:#000;overflow:hidden}
+.excl-wrap.tall{aspect-ratio:9 / 16;width:min(100%, calc(80vh * 9 / 16));margin:0 auto}
+.excl-wrap video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;display:block}
+.excl-card{border-color:var(--accent)!important}
+.excl-tag{display:inline-block;font-family:sans-serif;font-size:.55em;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--accent);color:#000;padding:.25em .65em;margin-right:.6em;vertical-align:middle;border-radius:2px}
+.excl-badge{border-color:var(--accent)!important;color:var(--accent)!important}
 .video-card-title{
   font-family:'Cinzel Decorative',serif;
   font-size:1.2rem;
@@ -441,6 +449,7 @@ a{color:inherit}
 .p-btn-row{display:flex;align-items:center;gap:1.2rem}
 .p-btn{background:transparent;border:none;color:var(--muted);cursor:pointer;font-size:.9rem;padding:.25rem;transition:color .2s}
 .p-btn:hover{color:var(--accent-lt)}
+.p-btn.active{color:var(--accent)}
 #p-playbtn{width:36px;height:36px;border:1px solid var(--line);background:transparent;color:var(--accent);cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center}
 .progress-wrap{height:4px;background:color-mix(in srgb,var(--accent) 14%, transparent);width:100%;max-width:520px;cursor:pointer}
 .progress-fill{height:100%;width:0;background:linear-gradient(to right,var(--accent),var(--accent-lt))}
@@ -1190,6 +1199,7 @@ footer{background:linear-gradient(to bottom,rgba(0,0,0,.28),rgba(0,0,0,.52)),var
       <button class="p-btn" onclick="prevTrack()">&#9664;&#9664;</button>
       <button id="p-playbtn" onclick="togglePlay()">&#9654;</button>
       <button class="p-btn" onclick="nextTrack()">&#9654;&#9654;</button>
+      <button id="shuffle-btn" class="p-btn" onclick="toggleShuffle()" title="Shuffle all songs">&#128256;</button>
     </div>
     <div class="progress-wrap" onclick="seek(event)"><div id="progress-fill" class="progress-fill"></div></div>
     <div style="display:flex;justify-content:space-between;width:100%;max-width:520px">
@@ -1201,12 +1211,58 @@ footer{background:linear-gradient(to bottom,rgba(0,0,0,.28),rgba(0,0,0,.52)),var
 </div>
 
 <audio id="audio"></audio>
-<script id="artist-data" type="application/json">{"artist":{"id":"daniel-kincaid","name":"Daniel Kincaid","genre":"Soft rock / adult contemporary","tagline":"The reluctant voice that became our soundtrack","bio":"The reluctant voice that became our soundtrack","theme":"soft_rock","logo":"images/logos/daniel-kincaid-logo.png","hero":"images/artist/daniel-kincaid-hero-photo.png","discographyBg":"images/artist/daniel-kincaid-discography-bg.png","videoBg":"images/artist/daniel-kincaid-video-bg.png","photos":["images/artist/daniel-kincaid-photo-1.png","images/artist/daniel-kincaid-photo-2.png","images/artist/daniel-kincaid-photo-3.png"]},"latest":{"title":"Still Falling For You (Acoustic)","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","type":"Latest Single","cover":"images/covers/daniel-kincaid-still-falling-for-you-acoustic-cover.png","image":"images/covers/daniel-kincaid-still-falling-for-you-acoustic-cover.png","audio":"https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1","videos":[]},"songs":[{"id":"already_gone","num":"01","title":"Already Gone","artist":"Daniel Kincaid","album":"Running Out of Reasons","trackNumber":1,"albumOrder":1,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-already-gone-cover.png","audio":"https://www.dropbox.com/scl/fi/gymx4asac3silj4s26bl5/Already-Gone-Mastered-MP3.mp3?rlkey=26ppdzh2o2my4ul41w6dmn9on&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/gymx4asac3silj4s26bl5/Already-Gone-Mastered-MP3.mp3?rlkey=26ppdzh2o2my4ul41w6dmn9on&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"daniel-kincaid-good-night-good-luck-goodbye","num":"02","title":"Good Night, Good Luck, Goodbye","artist":"Daniel Kincaid","album":"Running Out of Reasons","trackNumber":2,"albumOrder":2,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png","audio":"https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"every_little_maybe","num":"03","title":"Every Little Maybe","artist":"Daniel Kincaid","album":"Running Out of Reasons","trackNumber":3,"albumOrder":3,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-every-little-maybe-cover.png","audio":"https://www.dropbox.com/scl/fi/yqazu7n0kmft3lwjbl7u9/Daniel-Kincaid-Every-Little-Maybe-Album-Cut-Mastered-MP3.mp3?rlkey=d5wm2e19jp90fvh8jb3x1idv0&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/yqazu7n0kmft3lwjbl7u9/Daniel-Kincaid-Every-Little-Maybe-Album-Cut-Mastered-MP3.mp3?rlkey=d5wm2e19jp90fvh8jb3x1idv0&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"i_was_a_song","num":"04","title":"I Was a Song","artist":"Daniel Kincaid","album":"Running Out of Reasons","trackNumber":4,"albumOrder":4,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-i-was-a-song-cover.png","audio":"https://www.dropbox.com/scl/fi/zyxxfrhmo1x0gjkyinlit/daniel-kikcaid-i-was-a-song-redone-MP3.mp3?rlkey=xgaxjzsv42tms1qut458aw3eo&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/zyxxfrhmo1x0gjkyinlit/daniel-kikcaid-i-was-a-song-redone-MP3.mp3?rlkey=xgaxjzsv42tms1qut458aw3eo&raw=1","videos":[{"youtube":"https://youtu.be/PurOtrSGZBA","title":"Official Video","order":1}],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"daniel-kincaid-if-i-could-love-you-again","num":"05","title":"If I Could Love You Again","artist":"Daniel Kincaid","album":"Running Out of Reasons","trackNumber":5,"albumOrder":5,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-if-i-could-love-you-again-cover.png","audio":"https://www.dropbox.com/scl/fi/2ql4qup86bgc4u6eklmuu/daniel-kincaid-if-i-could-love-you-again-mp3.mp3?rlkey=p2fm0owphs9d677pdrsb5u5ba&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/2ql4qup86bgc4u6eklmuu/daniel-kincaid-if-i-could-love-you-again-mp3.mp3?rlkey=p2fm0owphs9d677pdrsb5u5ba&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"just_this_once","num":"06","title":"Just This Once","artist":"Daniel Kincaid","album":"Running Out of Reasons","trackNumber":6,"albumOrder":6,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-just-this-once-cover.png","audio":"https://www.dropbox.com/scl/fi/xfwjj7nwovh6s7gf5oy50/Just-This-Once-Mastered-MP3.mp3?rlkey=1phk6fx0ulbdwr0qpa7zdzjd6&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/xfwjj7nwovh6s7gf5oy50/Just-This-Once-Mastered-MP3.mp3?rlkey=1phk6fx0ulbdwr0qpa7zdzjd6&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"running_out_of_reasons","num":"07","title":"Running Out of Reasons","artist":"Daniel Kincaid","album":"Running Out of Reasons","trackNumber":7,"albumOrder":7,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-running-out-of-reasons-cover.png","audio":"https://www.dropbox.com/scl/fi/jozx0hhyrkk4e4w3qohqq/Daniel-Kincaid-Running-Out-Of-Reasons-Studio-Mastered-MP3.mp3?rlkey=3sig8j1al2ttgrj36q94m762i&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/jozx0hhyrkk4e4w3qohqq/Daniel-Kincaid-Running-Out-Of-Reasons-Studio-Mastered-MP3.mp3?rlkey=3sig8j1al2ttgrj36q94m762i&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"daniel-kincaid-still-falling-for-you","num":"08","title":"Still Falling For You","artist":"Daniel Kincaid","album":"Running Out of Reasons","trackNumber":8,"albumOrder":8,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-still-falling-for-you-cover.png","audio":"https://www.dropbox.com/scl/fi/3c1oo9f6zjfxl0yraa1t4/daniel-kincaid-still-falling-for-you-mp3.mp3?rlkey=mrcc4qytm5r7v8ux8rxxgps7b&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/3c1oo9f6zjfxl0yraa1t4/daniel-kincaid-still-falling-for-you-mp3.mp3?rlkey=mrcc4qytm5r7v8ux8rxxgps7b&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{"spotify":"","apple":"","youtubeMusic":""}},{"id":"daniel-kincaid-two-tickets-to-anywhere","num":"09","title":"Two Tickets To Anywhere","artist":"Daniel Kincaid","album":"Running Out of Reasons","trackNumber":9,"albumOrder":9,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-two-tickets-to-anywhere-cover.png","audio":"https://www.dropbox.com/scl/fi/q9psdn077iar1wqr9c7vh/daniel-kincaid-two-tickets-to-anywere-studio-mp3.mp3?rlkey=roqzl8qzizmvoypnb9pna9uu8&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/q9psdn077iar1wqr9c7vh/daniel-kincaid-two-tickets-to-anywere-studio-mp3.mp3?rlkey=roqzl8qzizmvoypnb9pna9uu8&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"daniel-kincaid-never-say-forever","num":"10","title":"Never Say Forever","artist":"Daniel Kincaid","album":"Running Out of Reasons","trackNumber":10,"albumOrder":10,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-never-say-forever-cover.png","audio":"https://www.dropbox.com/scl/fi/61ul2037yh3mjtpoade8a/daniel-kincaid-never-say-forever-studio-MP3-mastered.mp3?rlkey=hckr2unar12fyu9yhh7jgplxm&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/61ul2037yh3mjtpoade8a/daniel-kincaid-never-say-forever-studio-MP3-mastered.mp3?rlkey=hckr2unar12fyu9yhh7jgplxm&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{"spotify":"","apple":"","youtubeMusic":""}},{"id":"already_gone_acoustic","num":"11","title":"Already Gone (Acoustic)","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","trackNumber":1,"albumOrder":1,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-already-gone-acoustic-cover.png","audio":"https://www.dropbox.com/scl/fi/dmqu2pxxj7obdyeeporp5/Already-Gone-Acoustic-Mastered-MP3.mp3?rlkey=cnrkn2gcbn6j37adjx50hd6zy&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/dmqu2pxxj7obdyeeporp5/Already-Gone-Acoustic-Mastered-MP3.mp3?rlkey=cnrkn2gcbn6j37adjx50hd6zy&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"every_little_maybe_acoustic","num":"12","title":"Every Little Maybe (Acoustic)","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","trackNumber":2,"albumOrder":2,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-every-little-maybe-acoustic-cover.png","audio":"https://www.dropbox.com/scl/fi/nd9rduu6whs4e1ux405xe/Every-Little-Maybe-Guitar-and-Vocals-Mastered-MP3.mp3?rlkey=0gjwex7bq2s3ueej92z54efq4&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/nd9rduu6whs4e1ux405xe/Every-Little-Maybe-Guitar-and-Vocals-Mastered-MP3.mp3?rlkey=0gjwex7bq2s3ueej92z54efq4&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"i_was_a_song_acoustic","num":"13","title":"I Was a Song (Acoustic)","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","trackNumber":3,"albumOrder":3,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-i-was-a-song-acoustic-cover.png","audio":"https://www.dropbox.com/scl/fi/l16w4fgdxjj8bte180num/daniel-kincaid-i-was-a-song-acoustic-MP3-updated-mastered.mp3?rlkey=0h1x78e6nm2inkkoe2bj25ucq&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/l16w4fgdxjj8bte180num/daniel-kincaid-i-was-a-song-acoustic-MP3-updated-mastered.mp3?rlkey=0h1x78e6nm2inkkoe2bj25ucq&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"daniel-kincaid-if-i-could-love-you-again-acoustic","num":"14","title":"If I Could Love You Again (Acoustic)","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","trackNumber":4,"albumOrder":4,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-if-i-could-love-you-again-acoustic-cover.png","audio":"https://www.dropbox.com/scl/fi/jmo6l2jfrqolpnl8gth2r/daniel-kincaid-if-i-could-love-you-again-acoustic-mp3.mp3?rlkey=bvidcpl1ng08kobp64r5fqqxg&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/jmo6l2jfrqolpnl8gth2r/daniel-kincaid-if-i-could-love-you-again-acoustic-mp3.mp3?rlkey=bvidcpl1ng08kobp64r5fqqxg&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"just_this_once_acoustic","num":"15","title":"Just This Once (Acoustic)","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","trackNumber":5,"albumOrder":5,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-just-this-once-acoustic-cover.png","audio":"https://www.dropbox.com/scl/fi/dmp9xepktkg5lcozhipnl/Just-This-Once-Acoustic-Mastered-MP3.wav?rlkey=i188wzibt9uyzvjfuwa4bh4cp&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/dmp9xepktkg5lcozhipnl/Just-This-Once-Acoustic-Mastered-MP3.wav?rlkey=i188wzibt9uyzvjfuwa4bh4cp&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"running_out_of_reasons_acoustic","num":"16","title":"Running Out of Reasons (Acoustic)","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","trackNumber":6,"albumOrder":6,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-running-out-of-reasons-acoustic-cover.png","audio":"https://www.dropbox.com/scl/fi/wxb9d60j46233617z9np0/Running-Out-of-Reasons-STRIPPED-Mastered-MP3-v02.mp3?rlkey=4rfrumm5rsnfncbe7ft9p6j8k&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/wxb9d60j46233617z9np0/Running-Out-of-Reasons-STRIPPED-Mastered-MP3-v02.mp3?rlkey=4rfrumm5rsnfncbe7ft9p6j8k&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"daniel-kincaid-still-falling-for-you-acoustic","num":"17","title":"Still Falling For You (Acoustic)","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","trackNumber":7,"albumOrder":7,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-still-falling-for-you-acoustic-cover.png","audio":"https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"daniel-kincaid-two-tickets-to-anywhere-acoustic","num":"18","title":"Two Tickets to Anywhere (Acoustic)","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","trackNumber":8,"albumOrder":8,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-two-tickets-to-anywhere-acoustic-cover.png","audio":"https://www.dropbox.com/scl/fi/fs9jhg71t4cares7cinfa/daniel-kincaid-two-tickets-to-anywhere-acoustic-mp3.mp3?rlkey=3opi1aeo4sclkts0n9xskw9w5&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/fs9jhg71t4cares7cinfa/daniel-kincaid-two-tickets-to-anywhere-acoustic-mp3.mp3?rlkey=3opi1aeo4sclkts0n9xskw9w5&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"daniel-kincaid-good-night-good-luck-goodbye-2","num":"19","title":"Good Night, Good Luck, Goodbye","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","trackNumber":9,"albumOrder":9,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png","type":"album track","isLatest":false,"cover":"images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png","audio":"https://www.dropbox.com/scl/fi/qhzbpxztcd9dbrauk2yc6/daniel-kincaid-good-luck-goodbye-acoustic-MP3.mp3?rlkey=0gp19ccrds2ng26pwdj9t1cc9&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/qhzbpxztcd9dbrauk2yc6/daniel-kincaid-good-luck-goodbye-acoustic-MP3.mp3?rlkey=0gp19ccrds2ng26pwdj9t1cc9&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"daniel-kincaid-never-say-forever-acoustic","num":"20","title":"Never Say Forever (Acoustic)","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","trackNumber":10,"albumOrder":10,"albumCover":"images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-never-say-forever-acoustic-cover.png","audio":"https://www.dropbox.com/scl/fi/1liztvoz3afta1e2hyv39/daniel-kincaid-never-say-forever-acoustic-MP3-mastered.mp3?rlkey=z3fb98az2rwlu03kn8ajojmfa&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/1liztvoz3afta1e2hyv39/daniel-kincaid-never-say-forever-acoustic-MP3-mastered.mp3?rlkey=z3fb98az2rwlu03kn8ajojmfa&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{"spotify":"","apple":"","youtubeMusic":""}},{"id":"daniel-kincaid-i-freeze","num":"12","title":"I Freeze","artist":"Daniel Kincaid","album":"Running Out of Reasons","trackNumber":12,"albumOrder":12,"albumCover":"","type":"single","isLatest":false,"cover":"images/covers/daniel-kincaid-i-freeze-cover.png","audio":"https://www.dropbox.com/scl/fi/9yvwto17rwdgvk10owseh/daniel-kincaid-i-freeze-MP3-mastered.mp3?rlkey=n0w73rsvsqq2d0o6554353vd2&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/9yvwto17rwdgvk10owseh/daniel-kincaid-i-freeze-MP3-mastered.mp3?rlkey=n0w73rsvsqq2d0o6554353vd2&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":false,"explicit":false,"tags":[],"streaming":{}},{"id":"daniel-kincaid-i-freeze-acoustic","num":"12","title":"I Freeze (Acoustic)","artist":"Daniel Kincaid","album":"Running Out of Reasons Acoustic","trackNumber":12,"albumOrder":12,"albumCover":"","type":"single","isLatest":true,"cover":"images/covers/daniel-kincaid-i-freeze-acoustic-cover.png","audio":"https://www.dropbox.com/scl/fi/zpqgivgood1pc2mcxmqxk/daniel-kincaid-i-freeze-acoustic-MP3-mastered.mp3?rlkey=ytnhiju7kp26bvqwa6kr6tfw8&raw=1","audioSrc":"https://www.dropbox.com/scl/fi/zpqgivgood1pc2mcxmqxk/daniel-kincaid-i-freeze-acoustic-MP3-mastered.mp3?rlkey=ytnhiju7kp26bvqwa6kr6tfw8&raw=1","videos":[],"includeOnRadio":false,"includeOnHomepage":true,"explicit":false,"tags":[],"streaming":{"spotify":"","apple":"","youtubeMusic":""}}],"hasVideoSection":true}</script>
+<script id="artist-data" type="application/json">{"artist": {"id": "daniel-kincaid", "name": "Daniel Kincaid", "genre": "Soft rock / adult contemporary", "tagline": "The reluctant voice that became our soundtrack", "bio": "The reluctant voice that became our soundtrack", "theme": "soft_rock", "logo": "images/logos/daniel-kincaid-logo.png", "hero": "images/artist/daniel-kincaid-hero-photo.png", "discographyBg": "images/artist/daniel-kincaid-discography-bg.png", "videoBg": "images/artist/daniel-kincaid-video-bg.png", "photos": ["images/artist/daniel-kincaid-photo-1.png", "images/artist/daniel-kincaid-photo-2.png", "images/artist/daniel-kincaid-photo-3.png"]}, "latest": {"title": "I Freeze (Acoustic)", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "type": "Latest Single", "cover": "images/covers/daniel-kincaid-i-freeze-acoustic-cover.png", "image": "images/covers/daniel-kincaid-i-freeze-acoustic-cover.png", "audio": "https://www.dropbox.com/scl/fi/zpqgivgood1pc2mcxmqxk/daniel-kincaid-i-freeze-acoustic-MP3-mastered.mp3?rlkey=ytnhiju7kp26bvqwa6kr6tfw8&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/zpqgivgood1pc2mcxmqxk/daniel-kincaid-i-freeze-acoustic-MP3-mastered.mp3?rlkey=ytnhiju7kp26bvqwa6kr6tfw8&raw=1", "videos": []}, "songs": [{"id": "already_gone", "num": "01", "title": "Already Gone", "artist": "Daniel Kincaid", "album": "Running Out of Reasons", "trackNumber": 1, "albumOrder": 1, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-already-gone-cover.png", "audio": "https://www.dropbox.com/scl/fi/gymx4asac3silj4s26bl5/Already-Gone-Mastered-MP3.mp3?rlkey=26ppdzh2o2my4ul41w6dmn9on&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/gymx4asac3silj4s26bl5/Already-Gone-Mastered-MP3.mp3?rlkey=26ppdzh2o2my4ul41w6dmn9on&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "every_little_maybe", "num": "02", "title": "Every Little Maybe", "artist": "Daniel Kincaid", "album": "Running Out of Reasons", "trackNumber": 2, "albumOrder": 2, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-every-little-maybe-cover.png", "audio": "https://www.dropbox.com/scl/fi/yqazu7n0kmft3lwjbl7u9/Daniel-Kincaid-Every-Little-Maybe-Album-Cut-Mastered-MP3.mp3?rlkey=d5wm2e19jp90fvh8jb3x1idv0&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/yqazu7n0kmft3lwjbl7u9/Daniel-Kincaid-Every-Little-Maybe-Album-Cut-Mastered-MP3.mp3?rlkey=d5wm2e19jp90fvh8jb3x1idv0&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "i_was_a_song", "num": "03", "title": "I Was a Song", "artist": "Daniel Kincaid", "album": "Running Out of Reasons", "trackNumber": 3, "albumOrder": 3, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-i-was-a-song-cover.png", "audio": "https://www.dropbox.com/scl/fi/zyxxfrhmo1x0gjkyinlit/daniel-kikcaid-i-was-a-song-redone-MP3.mp3?rlkey=xgaxjzsv42tms1qut458aw3eo&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/zyxxfrhmo1x0gjkyinlit/daniel-kikcaid-i-was-a-song-redone-MP3.mp3?rlkey=xgaxjzsv42tms1qut458aw3eo&raw=1", "videos": [{"youtube": "https://youtu.be/PurOtrSGZBA", "title": "Official Video", "order": 1}], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "daniel-kincaid-if-i-could-love-you-again", "num": "04", "title": "If I Could Love You Again", "artist": "Daniel Kincaid", "album": "Running Out of Reasons", "trackNumber": 4, "albumOrder": 4, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-if-i-could-love-you-again-cover.png", "audio": "https://www.dropbox.com/scl/fi/2ql4qup86bgc4u6eklmuu/daniel-kincaid-if-i-could-love-you-again-mp3.mp3?rlkey=p2fm0owphs9d677pdrsb5u5ba&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/2ql4qup86bgc4u6eklmuu/daniel-kincaid-if-i-could-love-you-again-mp3.mp3?rlkey=p2fm0owphs9d677pdrsb5u5ba&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "just_this_once", "num": "05", "title": "Just This Once", "artist": "Daniel Kincaid", "album": "Running Out of Reasons", "trackNumber": 5, "albumOrder": 5, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-just-this-once-cover.png", "audio": "https://www.dropbox.com/scl/fi/xfwjj7nwovh6s7gf5oy50/Just-This-Once-Mastered-MP3.mp3?rlkey=1phk6fx0ulbdwr0qpa7zdzjd6&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/xfwjj7nwovh6s7gf5oy50/Just-This-Once-Mastered-MP3.mp3?rlkey=1phk6fx0ulbdwr0qpa7zdzjd6&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "running_out_of_reasons", "num": "06", "title": "Running Out of Reasons", "artist": "Daniel Kincaid", "album": "Running Out of Reasons", "trackNumber": 6, "albumOrder": 6, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-running-out-of-reasons-cover.png", "audio": "https://www.dropbox.com/scl/fi/jozx0hhyrkk4e4w3qohqq/Daniel-Kincaid-Running-Out-Of-Reasons-Studio-Mastered-MP3.mp3?rlkey=3sig8j1al2ttgrj36q94m762i&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/jozx0hhyrkk4e4w3qohqq/Daniel-Kincaid-Running-Out-Of-Reasons-Studio-Mastered-MP3.mp3?rlkey=3sig8j1al2ttgrj36q94m762i&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "daniel-kincaid-still-falling-for-you", "num": "07", "title": "Still Falling For You", "artist": "Daniel Kincaid", "album": "Running Out of Reasons", "trackNumber": 7, "albumOrder": 7, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-still-falling-for-you-cover.png", "audio": "https://www.dropbox.com/scl/fi/3c1oo9f6zjfxl0yraa1t4/daniel-kincaid-still-falling-for-you-mp3.mp3?rlkey=mrcc4qytm5r7v8ux8rxxgps7b&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/3c1oo9f6zjfxl0yraa1t4/daniel-kincaid-still-falling-for-you-mp3.mp3?rlkey=mrcc4qytm5r7v8ux8rxxgps7b&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {"spotify": "", "apple": "", "youtubeMusic": ""}}, {"id": "daniel-kincaid-two-tickets-to-anywhere", "num": "08", "title": "Two Tickets To Anywhere", "artist": "Daniel Kincaid", "album": "Running Out of Reasons", "trackNumber": 8, "albumOrder": 8, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-two-tickets-to-anywhere-cover.png", "audio": "https://www.dropbox.com/scl/fi/q9psdn077iar1wqr9c7vh/daniel-kincaid-two-tickets-to-anywere-studio-mp3.mp3?rlkey=roqzl8qzizmvoypnb9pna9uu8&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/q9psdn077iar1wqr9c7vh/daniel-kincaid-two-tickets-to-anywere-studio-mp3.mp3?rlkey=roqzl8qzizmvoypnb9pna9uu8&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "daniel-kincaid-never-say-forever", "num": "09", "title": "Never Say Forever", "artist": "Daniel Kincaid", "album": "Running Out of Reasons", "trackNumber": 9, "albumOrder": 10, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-never-say-forever-cover.png", "audio": "https://www.dropbox.com/scl/fi/61ul2037yh3mjtpoade8a/daniel-kincaid-never-say-forever-studio-MP3-mastered.mp3?rlkey=hckr2unar12fyu9yhh7jgplxm&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/61ul2037yh3mjtpoade8a/daniel-kincaid-never-say-forever-studio-MP3-mastered.mp3?rlkey=hckr2unar12fyu9yhh7jgplxm&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {"spotify": "", "apple": "", "youtubeMusic": ""}}, {"id": "daniel-kincaid-good-night-good-luck-goodbye", "num": "10", "title": "Good Night, Good Luck, Goodbye", "artist": "Daniel Kincaid", "album": "Running Out of Reasons", "trackNumber": 10, "albumOrder": 1, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png", "audio": "https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {"spotify": "", "apple": "", "youtubeMusic": ""}}, {"id": "daniel-kincaid-i-freeze", "num": "11", "title": "I Freeze", "artist": "Daniel Kincaid", "album": "Running Out of Reasons", "trackNumber": 12, "albumOrder": 12, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-i-freeze-cover.png", "audio": "https://www.dropbox.com/scl/fi/9yvwto17rwdgvk10owseh/daniel-kincaid-i-freeze-MP3-mastered.mp3?rlkey=n0w73rsvsqq2d0o6554353vd2&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/9yvwto17rwdgvk10owseh/daniel-kincaid-i-freeze-MP3-mastered.mp3?rlkey=n0w73rsvsqq2d0o6554353vd2&raw=1", "videos": [], "includeOnRadio": false, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "already_gone_acoustic", "num": "12", "title": "Already Gone (Acoustic)", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "trackNumber": 1, "albumOrder": 1, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-already-gone-acoustic-cover.png", "audio": "https://www.dropbox.com/scl/fi/dmqu2pxxj7obdyeeporp5/Already-Gone-Acoustic-Mastered-MP3.mp3?rlkey=cnrkn2gcbn6j37adjx50hd6zy&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/dmqu2pxxj7obdyeeporp5/Already-Gone-Acoustic-Mastered-MP3.mp3?rlkey=cnrkn2gcbn6j37adjx50hd6zy&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "every_little_maybe_acoustic", "num": "13", "title": "Every Little Maybe (Acoustic)", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "trackNumber": 2, "albumOrder": 2, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-every-little-maybe-acoustic-cover.png", "audio": "https://www.dropbox.com/scl/fi/nd9rduu6whs4e1ux405xe/Every-Little-Maybe-Guitar-and-Vocals-Mastered-MP3.mp3?rlkey=0gjwex7bq2s3ueej92z54efq4&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/nd9rduu6whs4e1ux405xe/Every-Little-Maybe-Guitar-and-Vocals-Mastered-MP3.mp3?rlkey=0gjwex7bq2s3ueej92z54efq4&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {"spotify": "", "apple": "", "youtubeMusic": ""}}, {"id": "i_was_a_song_acoustic", "num": "14", "title": "I Was a Song (Acoustic)", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "trackNumber": 3, "albumOrder": 3, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-i-was-a-song-acoustic-cover.png", "audio": "https://www.dropbox.com/scl/fi/l16w4fgdxjj8bte180num/daniel-kincaid-i-was-a-song-acoustic-MP3-updated-mastered.mp3?rlkey=0h1x78e6nm2inkkoe2bj25ucq&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/l16w4fgdxjj8bte180num/daniel-kincaid-i-was-a-song-acoustic-MP3-updated-mastered.mp3?rlkey=0h1x78e6nm2inkkoe2bj25ucq&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {"spotify": "", "apple": "", "youtubeMusic": ""}}, {"id": "daniel-kincaid-if-i-could-love-you-again-acoustic", "num": "15", "title": "If I Could Love You Again (Acoustic)", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "trackNumber": 4, "albumOrder": 4, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-if-i-could-love-you-again-acoustic-cover.png", "audio": "https://www.dropbox.com/scl/fi/jmo6l2jfrqolpnl8gth2r/daniel-kincaid-if-i-could-love-you-again-acoustic-mp3.mp3?rlkey=bvidcpl1ng08kobp64r5fqqxg&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/jmo6l2jfrqolpnl8gth2r/daniel-kincaid-if-i-could-love-you-again-acoustic-mp3.mp3?rlkey=bvidcpl1ng08kobp64r5fqqxg&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "just_this_once_acoustic", "num": "16", "title": "Just This Once (Acoustic)", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "trackNumber": 5, "albumOrder": 5, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-just-this-once-acoustic-cover.png", "audio": "https://www.dropbox.com/scl/fi/dmp9xepktkg5lcozhipnl/Just-This-Once-Acoustic-Mastered-MP3.wav?rlkey=i188wzibt9uyzvjfuwa4bh4cp&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/dmp9xepktkg5lcozhipnl/Just-This-Once-Acoustic-Mastered-MP3.wav?rlkey=i188wzibt9uyzvjfuwa4bh4cp&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {"spotify": "", "apple": "", "youtubeMusic": ""}}, {"id": "running_out_of_reasons_acoustic", "num": "17", "title": "Running Out of Reasons (Acoustic)", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "trackNumber": 6, "albumOrder": 6, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-cover.png", "audio": "https://www.dropbox.com/scl/fi/wxb9d60j46233617z9np0/Running-Out-of-Reasons-STRIPPED-Mastered-MP3-v02.mp3?rlkey=4rfrumm5rsnfncbe7ft9p6j8k&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/wxb9d60j46233617z9np0/Running-Out-of-Reasons-STRIPPED-Mastered-MP3-v02.mp3?rlkey=4rfrumm5rsnfncbe7ft9p6j8k&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {"spotify": "", "apple": "", "youtubeMusic": ""}}, {"id": "daniel-kincaid-still-falling-for-you-acoustic", "num": "18", "title": "Still Falling For You (Acoustic)", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "trackNumber": 7, "albumOrder": 7, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-still-falling-for-you-acoustic-cover.png", "audio": "https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {}}, {"id": "daniel-kincaid-two-tickets-to-anywhere-acoustic", "num": "19", "title": "Two Tickets to Anywhere (Acoustic)", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "trackNumber": 8, "albumOrder": 8, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-two-tickets-to-anywhere-acoustic-cover.png", "audio": "https://www.dropbox.com/scl/fi/fs9jhg71t4cares7cinfa/daniel-kincaid-two-tickets-to-anywhere-acoustic-mp3.mp3?rlkey=3opi1aeo4sclkts0n9xskw9w5&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/fs9jhg71t4cares7cinfa/daniel-kincaid-two-tickets-to-anywhere-acoustic-mp3.mp3?rlkey=3opi1aeo4sclkts0n9xskw9w5&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {"spotify": "", "apple": "", "youtubeMusic": ""}}, {"id": "daniel-kincaid-never-say-forever-acoustic", "num": "20", "title": "Never Say Forever (Acoustic)", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "trackNumber": 9, "albumOrder": 10, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png", "type": "single", "isLatest": false, "cover": "images/covers/daniel-kincaid-never-say-forever-acoustic-cover.png", "audio": "https://www.dropbox.com/scl/fi/1liztvoz3afta1e2hyv39/daniel-kincaid-never-say-forever-acoustic-MP3-mastered.mp3?rlkey=z3fb98az2rwlu03kn8ajojmfa&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/1liztvoz3afta1e2hyv39/daniel-kincaid-never-say-forever-acoustic-MP3-mastered.mp3?rlkey=z3fb98az2rwlu03kn8ajojmfa&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {"spotify": "", "apple": "", "youtubeMusic": ""}}, {"id": "daniel-kincaid-good-night-good-luck-goodbye-2", "num": "21", "title": "Good Night, Good Luck, Goodbye", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "trackNumber": 10, "albumOrder": 12, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png", "type": "album track", "isLatest": false, "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png", "audio": "https://www.dropbox.com/scl/fi/qhzbpxztcd9dbrauk2yc6/daniel-kincaid-good-luck-goodbye-acoustic-MP3.mp3?rlkey=0gp19ccrds2ng26pwdj9t1cc9&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/qhzbpxztcd9dbrauk2yc6/daniel-kincaid-good-luck-goodbye-acoustic-MP3.mp3?rlkey=0gp19ccrds2ng26pwdj9t1cc9&raw=1", "videos": [], "includeOnRadio": true, "includeOnHomepage": false, "explicit": false, "tags": [], "streaming": {"spotify": "", "apple": "", "youtubeMusic": ""}}, {"id": "daniel-kincaid-i-freeze-acoustic", "num": "22", "title": "I Freeze (Acoustic)", "artist": "Daniel Kincaid", "album": "Running Out of Reasons Acoustic", "trackNumber": 12, "albumOrder": 12, "albumCover": "images/covers/daniel-kincaid-running-out-of-reasons-acoustic-ALBUM-cover.png", "type": "single", "isLatest": true, "cover": "images/covers/daniel-kincaid-i-freeze-acoustic-cover.png", "audio": "https://www.dropbox.com/scl/fi/zpqgivgood1pc2mcxmqxk/daniel-kincaid-i-freeze-acoustic-MP3-mastered.mp3?rlkey=ytnhiju7kp26bvqwa6kr6tfw8&raw=1", "audioSrc": "https://www.dropbox.com/scl/fi/zpqgivgood1pc2mcxmqxk/daniel-kincaid-i-freeze-acoustic-MP3-mastered.mp3?rlkey=ytnhiju7kp26bvqwa6kr6tfw8&raw=1", "videos": [], "includeOnRadio": false, "includeOnHomepage": true, "explicit": false, "tags": [], "streaming": {"spotify": "", "apple": "", "youtubeMusic": ""}}], "hasVideoSection": true}</script>
 <script>
 const DATA = JSON.parse(document.getElementById('artist-data').textContent);
 const SONGS = DATA.songs || [];
 let currentIndex = -1;
 const audio = document.getElementById('audio');
+
+// Shuffle All: one randomized pass through every song, no repeats, kept for
+// this browser tab's session (sessionStorage) so it survives navigating the
+// page but resets on a fresh visit. Turning it off returns to the order
+// shown on screen (album order, then track order within each album).
+let shuffleMode = false;
+let shuffleQueue = [];
+let shufflePos = -1;
+function shuffleKey() { return 'htr_shuffle_' + ((DATA.artist && DATA.artist.id) || 'artist'); }
+function buildShuffleQueue() {
+  const idxs = SONGS.map((_, i) => i);
+  for (let i = idxs.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const tmp = idxs[i]; idxs[i] = idxs[j]; idxs[j] = tmp;
+  }
+  return idxs;
+}
+function saveShuffleState() {
+  try { sessionStorage.setItem(shuffleKey(), JSON.stringify({queue: shuffleQueue, pos: shufflePos})); } catch(e) {}
+}
+function restoreShuffleState() {
+  try {
+    const raw = sessionStorage.getItem(shuffleKey());
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    if (!Array.isArray(saved.queue) || saved.queue.length !== SONGS.length) return;
+    shuffleQueue = saved.queue;
+    shufflePos = typeof saved.pos === 'number' ? saved.pos : -1;
+    shuffleMode = true;
+    const btn = document.getElementById('shuffle-btn');
+    if (btn) btn.classList.add('active');
+  } catch(e) {}
+}
+window.toggleShuffle = function() {
+  shuffleMode = !shuffleMode;
+  const btn = document.getElementById('shuffle-btn');
+  if (shuffleMode) {
+    shuffleQueue = buildShuffleQueue();
+    shufflePos = -1;
+    saveShuffleState();
+    if (btn) btn.classList.add('active');
+  } else {
+    try { sessionStorage.removeItem(shuffleKey()); } catch(e) {}
+    if (btn) btn.classList.remove('active');
+  }
+};
 
 function esc(value) {
   return String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));
@@ -1255,10 +1311,29 @@ function updateNowPlayingArt(song) {
     }, 120);
   }
 }
+function ytVideos(song) {
+  return (Array.isArray(song.videos) ? song.videos : []).filter(v => v && !v.exclusive && (v.youtube || v.url || v.href || v.youtube_9));
+}
+function exVideos(song) {
+  return (Array.isArray(song.videos) ? song.videos : []).filter(v => v && v.exclusive && (v.mp4_16 || v.mp4_9));
+}
 function videoUrl(song) {
-  const videos = Array.isArray(song.videos) ? song.videos : [];
-  if (!videos.length) return '';
-  return videos[0].youtube || videos[0].url || videos[0].href || '';
+  const v = ytVideos(song)[0];
+  return v ? (v.youtube || v.url || v.href || v.youtube_9 || '') : '';
+}
+// phones (portrait / narrow) get the vertical YouTube video when there is one, computers the 16:9
+function isTallScreen() {
+  return window.matchMedia('(orientation: portrait)').matches || window.innerWidth < 700;
+}
+function ytPick(song) {
+  const v = ytVideos(song)[0] || {};
+  const wide = v.youtube || v.url || v.href || '', tall = v.youtube_9 || '';
+  const useTall = tall && (isTallScreen() || !wide);
+  return { url: useTall ? tall : wide, tall: !!useTall };
+}
+function exclusiveBadge(song, stop) {
+  if (!exVideos(song).length) return '';
+  return `<a class="track-badge excl-badge" href="#excl-${esc(song.id)}"${stop ? ' onclick="event.stopPropagation()"' : ''}>&#9654; Exclusive Video</a>`;
 }
 function youtubeEmbedUrl(url) {
   const value = String(url || '').trim();
@@ -1281,9 +1356,9 @@ function youtubeEmbedUrl(url) {
   }
 }
 function videoMarkup(song) {
-  const url = videoUrl(song);
-  if (!url) return '<span class="track-badge">Video Coming Soon</span>';
-  return `<a class="track-badge" target="_blank" rel="noreferrer" href="${esc(url)}">Watch Video</a>`;
+  const url = videoUrl(song), ex = exclusiveBadge(song);
+  if (!url && !ex) return '<span class="track-badge">Video Coming Soon</span>';
+  return ex + (url ? ` <a class="track-badge" target="_blank" rel="noreferrer" href="${esc(url)}">Watch Video</a>` : '');
 }
 function renderLatest() {
   const latest = SONGS.find(s => s.isLatest) || SONGS[0];
@@ -1306,6 +1381,23 @@ function renderVideo() {
   const container = document.getElementById('video-render');
   if (!container) return;
 
+  const exItems = [];
+  SONGS.forEach(s => exVideos(s).forEach(v => exItems.push({ song: s, v: v })));
+  exItems.sort((a, b) => (parseInt(a.v.order ?? 9999, 10) - parseInt(b.v.order ?? 9999, 10)) || String(a.song.title || '').localeCompare(String(b.song.title || '')));
+  const seenEx = {};
+  const exHtml = exItems.map(({ song, v }) => {
+    const anchor = seenEx[song.id] ? '' : ` id="excl-${esc(song.id)}"`; seenEx[song.id] = 1;
+    return `
+        <div class="video-card excl-card"${anchor}>
+          <div class="excl-wrap">
+            <video class="excl-video" controls playsinline preload="metadata" poster="${esc(songCover(song))}"
+              data-v16="${esc(v.mp4_16 || '')}" data-v9="${esc(v.mp4_9 || '')}"></video>
+          </div>
+          <div class="video-card-title"><span class="excl-tag">Exclusive</span>${esc(v.title && v.title !== 'Official Video' ? song.title + ' — ' + v.title : song.title)}</div>
+          <div class="video-card-sub" style="padding:0 1rem 1rem">Only here — not on YouTube yet</div>
+        </div>`;
+  }).join('');
+
   const videoSongs = SONGS
     .filter(s => videoUrl(s))
     .sort((a, b) => {
@@ -1314,18 +1406,19 @@ function renderVideo() {
       return parseInt(av, 10) - parseInt(bv, 10) || String(a.title || '').localeCompare(String(b.title || ''));
     });
 
-  if (!videoSongs.length) {
+  if (!videoSongs.length && !exItems.length) {
     container.innerHTML = '<div class="video-coming-soon visible"><div class="play-triangle"></div><strong>Video Coming Soon</strong><span>' + esc(DATA.artist.name) + ' does not have a video assigned yet. The video system is installed and ready.</span></div>';
     return;
   }
 
   container.innerHTML = `
     <div class="video-grid">
+      ${exHtml}
       ${videoSongs.map(song => `
         <div class="video-card video-card-embed">
-          <div class="video-embed-wrap">
+          <div class="video-embed-wrap${ytPick(song).tall ? ' tall' : ''}">
             <iframe
-              src="${esc(youtubeEmbedUrl(videoUrl(song)))}"
+              src="${esc(youtubeEmbedUrl(ytPick(song).url))}"
               title="${esc(song.title)} video"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1339,11 +1432,60 @@ function renderVideo() {
       `).join('')}
     </div>
   `;
+  setupExclusives();
+}
+// Exclusive videos: phones (portrait / narrow) get the 9:16 file, computers the 16:9 -
+// whichever exists if only one does. Re-checked on rotate/resize unless the video is playing.
+function pickExclusiveSources() {
+  const tall = window.matchMedia('(orientation: portrait)').matches || window.innerWidth < 700;
+  document.querySelectorAll('video.excl-video').forEach(v => {
+    if (!v.paused && v.currentSrc) return;
+    const s16 = v.dataset.v16, s9 = v.dataset.v9;
+    const src = tall ? (s9 || s16) : (s16 || s9);
+    v.parentElement.classList.toggle('tall', src === s9 && !!s9);
+    if (v.getAttribute('src') !== src) { v.setAttribute('src', src); v.load(); }
+  });
+}
+function setupExclusives() {
+  const vids = document.querySelectorAll('video.excl-video');
+  if (!vids.length) return;
+  pickExclusiveSources();
+  vids.forEach(v => v.addEventListener('play', () => {
+    document.querySelectorAll('video.excl-video').forEach(o => { if (o !== v) o.pause(); });
+    if (!audio.paused) togglePlay();                     // pause this site's music player
+    try { new BroadcastChannel('htr-audio').postMessage({type:'artist-play'}); } catch (e) {}   // and HTR Radio
+    try { if (typeof gtag === 'function') gtag('event', 'play_exclusive_video', { artist: DATA.artist.name }); } catch (e) {}
+  }));
+  let t = null;
+  window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(pickExclusiveSources, 250); });
+  audio.addEventListener('play', () => document.querySelectorAll('video.excl-video').forEach(v => v.pause()));
 }
 function trackOrder(song) {
   const raw = song.trackNumber ?? song.albumOrder ?? song.num ?? 9999;
   const n = parseInt(raw, 10);
   return Number.isFinite(n) ? n : 9999;
+}
+// Canonical playback order: same grouping + sort as the on-screen tracklist,
+// flattened into one list of SONGS indices. next/prev walk this, never the
+// raw SONGS array order, so playback can't drift from what's displayed.
+function computePlayOrder() {
+  const albums = new Map();
+  SONGS.forEach((song, i) => {
+    const album = song.album || 'Singles';
+    if (!albums.has(album)) albums.set(album, []);
+    albums.get(album).push(i);
+  });
+  const order = [];
+  albums.forEach(idxs => {
+    const sorted = idxs.slice().sort((a, b) => trackOrder(SONGS[a]) - trackOrder(SONGS[b]) || String(SONGS[a].title || '').localeCompare(String(SONGS[b].title || '')));
+    order.push(...sorted);
+  });
+  return order;
+}
+let PLAY_ORDER = [];
+function currentPlayPos() {
+  const pos = PLAY_ORDER.indexOf(currentIndex);
+  return pos === -1 ? 0 : pos;
 }
 function renderAlbums() {
   const root = document.getElementById('albums');
@@ -1369,7 +1511,7 @@ function renderAlbums() {
     const sideClass = idx % 2 ? 'cover-right' : 'cover-left';
 
     const trackRows = orderedSongs.map((song, i) => {
-      const latestBadge = (song.isLatest ? '<span class="track-badge">Latest</span>' : '') + (videoUrl(song) ? ' <a class="track-badge" target="_blank" rel="noreferrer" href="' + esc(videoUrl(song)) + '">Watch Video</a>' : '');
+      const latestBadge = (song.isLatest ? '<span class="track-badge">Latest</span>' : '') + (exVideos(song).length ? ' ' + exclusiveBadge(song) : '') + (videoUrl(song) ? ' <a class="track-badge" target="_blank" rel="noreferrer" href="' + esc(videoUrl(song)) + '">Watch Video</a>' : '');
       return `
         <div class="track-row">
           <div class="track-num">${String(i + 1).padStart(2, '0')}</div>
@@ -1389,7 +1531,7 @@ function renderAlbums() {
         </div>
         <div class="release-title">${esc(song.title)}</div>
         <div class="release-album">${esc(song.album || '')}</div>
-        ${videoUrl(song) ? `<a class="track-badge" target="_blank" rel="noreferrer" href="${esc(videoUrl(song))}" onclick="event.stopPropagation()">Watch Video</a>` : ''}
+        ${exclusiveBadge(song, true)}${videoUrl(song) ? `<a class="track-badge" target="_blank" rel="noreferrer" href="${esc(videoUrl(song))}" onclick="event.stopPropagation()">Watch Video</a>` : ''}
       </div>
     `).join('');
 
@@ -1490,8 +1632,27 @@ function togglePlay() {
     document.querySelectorAll('.np-play-pause').forEach(b=>b.innerHTML='&#9654;');
   }
 }
-function nextTrack() { if (SONGS.length) playIndex((currentIndex + 1) % SONGS.length); }
-function prevTrack() { if (SONGS.length) playIndex((currentIndex - 1 + SONGS.length) % SONGS.length); }
+function nextTrack() {
+  if (!SONGS.length || !PLAY_ORDER.length) return;
+  if (shuffleMode) {
+    shufflePos++;
+    if (shufflePos >= shuffleQueue.length) { shuffleQueue = buildShuffleQueue(); shufflePos = 0; }
+    saveShuffleState();
+    playIndex(shuffleQueue[shufflePos]);
+  } else {
+    const pos = (currentPlayPos() + 1) % PLAY_ORDER.length;
+    playIndex(PLAY_ORDER[pos]);
+  }
+}
+function prevTrack() {
+  if (!SONGS.length || !PLAY_ORDER.length) return;
+  if (shuffleMode) {
+    if (shufflePos > 0) { shufflePos--; saveShuffleState(); playIndex(shuffleQueue[shufflePos]); }
+  } else {
+    const pos = (currentPlayPos() - 1 + PLAY_ORDER.length) % PLAY_ORDER.length;
+    playIndex(PLAY_ORDER[pos]);
+  }
+}
 function seek(e) {
   if (!audio.duration) return;
   const rect = e.currentTarget.getBoundingClientRect();
@@ -1515,6 +1676,8 @@ function checkPhotoStrip() {
 renderLatest();
 renderVideo();
 renderAlbums();
+PLAY_ORDER = computePlayOrder();
+restoreShuffleState();
 </script>
 </body>
 </html>

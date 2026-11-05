@@ -2,11 +2,11 @@
   "artist": "Daniel Kincaid",
   "latestUrl": "latest.json",
   "featuredTrack": {
-    "title": "Still Falling For You (Acoustic)",
+    "title": "I Freeze (Acoustic)",
     "artist": "Daniel Kincaid",
     "album": "Running Out of Reasons Acoustic",
-    "cover": "images/covers/daniel-kincaid-still-falling-for-you-acoustic-cover.png",
-    "audioSrc": "https://www.dropbox.com/scl/fi/311thg22xifv26fr5ig90/daniel-kincaid-still-falling-for-you-acoustic-mp3.mp3?rlkey=wigwtwksu5gaikiw6d7tpvb8q&raw=1",
+    "cover": "images/covers/daniel-kincaid-i-freeze-acoustic-cover.png",
+    "audioSrc": "https://www.dropbox.com/scl/fi/zpqgivgood1pc2mcxmqxk/daniel-kincaid-i-freeze-acoustic-MP3-mastered.mp3?rlkey=ytnhiju7kp26bvqwa6kr6tfw8&raw=1",
     "videos": []
   },
   "tracks": [
@@ -16,14 +16,6 @@
       "album": "Running Out of Reasons",
       "cover": "images/covers/daniel-kincaid-already-gone-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/gymx4asac3silj4s26bl5/Already-Gone-Mastered-MP3.mp3?rlkey=26ppdzh2o2my4ul41w6dmn9on&raw=1",
-      "videos": []
-    },
-    {
-      "title": "Good Night, Good Luck, Goodbye",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons",
-      "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1",
       "videos": []
     },
     {
@@ -77,7 +69,7 @@
       "artist": "Daniel Kincaid",
       "album": "Running Out of Reasons",
       "cover": "images/covers/daniel-kincaid-still-falling-for-you-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/kkjsw6yz5pplf3tmx3yjk/daniel-kincaid-still-falling-for-you-studio-mp3.mp3?rlkey=k5ybq1kclxxv9kixabf96vmhy&raw=1",
+      "audioSrc": "https://www.dropbox.com/scl/fi/3c1oo9f6zjfxl0yraa1t4/daniel-kincaid-still-falling-for-you-mp3.mp3?rlkey=mrcc4qytm5r7v8ux8rxxgps7b&raw=1",
       "videos": []
     },
     {
@@ -94,6 +86,14 @@
       "album": "Running Out of Reasons",
       "cover": "images/covers/daniel-kincaid-never-say-forever-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/61ul2037yh3mjtpoade8a/daniel-kincaid-never-say-forever-studio-MP3-mastered.mp3?rlkey=hckr2unar12fyu9yhh7jgplxm&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Good Night, Good Luck, Goodbye",
+      "artist": "Daniel Kincaid",
+      "album": "Running Out of Reasons",
+      "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/6e07sh44fkk2rpa3wmdud/daniel-kincaid-good-luck-goodbye-MP3.mp3?rlkey=9g6ykvuqvvtho7kz0cets9yae&raw=1",
       "videos": []
     },
     {
@@ -161,19 +161,19 @@
       "videos": []
     },
     {
-      "title": "Good Night, Good Luck, Goodbye",
-      "artist": "Daniel Kincaid",
-      "album": "Running Out of Reasons Acoustic",
-      "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/qhzbpxztcd9dbrauk2yc6/daniel-kincaid-good-luck-goodbye-acoustic-MP3.mp3?rlkey=0gp19ccrds2ng26pwdj9t1cc9&raw=1",
-      "videos": []
-    },
-    {
       "title": "Never Say Forever (Acoustic)",
       "artist": "Daniel Kincaid",
       "album": "Running Out of Reasons Acoustic",
       "cover": "images/covers/daniel-kincaid-never-say-forever-acoustic-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/1liztvoz3afta1e2hyv39/daniel-kincaid-never-say-forever-acoustic-MP3-mastered.mp3?rlkey=z3fb98az2rwlu03kn8ajojmfa&raw=1",
+      "videos": []
+    },
+    {
+      "title": "Good Night, Good Luck, Goodbye",
+      "artist": "Daniel Kincaid",
+      "album": "Running Out of Reasons Acoustic",
+      "cover": "images/covers/daniel-kincaid-good-night-good-luck-goodbye-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/qhzbpxztcd9dbrauk2yc6/daniel-kincaid-good-luck-goodbye-acoustic-MP3.mp3?rlkey=0gp19ccrds2ng26pwdj9t1cc9&raw=1",
       "videos": []
     }
   ]
